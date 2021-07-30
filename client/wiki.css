@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.wikiTD {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #EEEEEE;
+    padding: 5px;
+}

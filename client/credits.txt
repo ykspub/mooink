@@ -1,0 +1,5 @@
+Credits:
+* (0) - Platform texture, beta tester
+* Jeff - beta tester, meta and balance improvements
+* Snoosh, Raga, Eternal Sigh, Mr Gun, Collapse, Rye Barley, Beastmonster - beta testers
+* EduardoPlayer - playability and polish suggestions, tester

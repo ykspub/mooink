@@ -1,0 +1,149 @@
+7/29/2021:
+* Added tooltips to join screen
+* Modified color selector (put 3 or more points into vanity to pick color)
+* Re-wrote join screen, now with twice as much flexbox
+    * Imagine actually learning CSS lmao
+
+7/29/2021:
+* Optimized code for better GC performance, for server & client
+* Modified shadows code to look smoother
+    * Players used to only appear if more than half their character was
+        outside a shadow. Now, they appear whenever a tiny part of their 
+        body is outside a shadow (and the part behind the shadow gets 
+        covered up client-side, instead of enforced server-side)
+
+7/26/2021:
+* Fixed shadows dissapearing bug
+* Bots now cannot effectively double-team you until you have 3 or more kills
+    * Zombies are an exception, but you control the spawning of zombies so it doesn't matter that much
+    * Gun bots might appear to be double-teaming, but only one of them is actually shooting at a time,
+        i.e. they cannot **effectively** double-team you
+* Gun bots now follow you and will automatically place a spike if trapped
+* Added zombies (very high resistance NPC, but cannot heal. Follows you constantly and attacks with melee)
+* Added new spawner structure
+    > Spawns zombies that attack you
+* Fixed issue of healthbar being covered by other player
+
+7/24/2021:
+* Fixed gameloop (gameplay should be smoother)
+    * Further optimizations are still pending
+* Added damage texts
+* Texture load now starts before the page is fully loaded, so everything will load faster
+* Removed shadows caching
+    * Fixes shadows bug
+    > With new optimizations to the occludes function, shadow calculations
+        are extremely fast, so caching really just causes gc issues
+* Added webhook for telemetry
+
+7/23/2021:
+* Collisions now look a lot cleaner than before
+    * Switched from extrapolation to interpolation
+* Switched to a custom gameloop timer for more accuracy
+    * Old setInterval timer was consistently ~15 ms too slow
+* Fixed lag spike caused by improper setIntermediate 
+
+7/22/2021:
+* Fixed bug where boxes containing different items would merge on drag
+* Inventory now shows images instead of text (more compact + prettier)
+* Optimizations to game join menu and inventory image loading (caching)
+* Added recipes menu
+* Continued re-texturing work
+
+7/20/2021:
+* Nerfed nuro heavily
+    * Nuro starts off as being unable to kill a stationary player as long as you heal, and difficulty
+        scales with the number of kills you have. At 10 kills, nuro's difficulty is maxed out and is
+        just as hard as the original nuros
+* Fixed the "player flickering as it comes into view" bug
+* Removed serialized player caching, it literally only saves a few microseconds, but causes huge GC issues
+    > don't ask why I added it in the first place, let's just say I messed up a few unit conversions
+
+7/19/2021:
+* Made game menu look better
+* Nerfed wrench speed by a little
+* "Breaching rifle" is now replaced by "rifle"
+    * Deals 0 structures damage, but 60 player damage
+* Switched to ws, which should be (slightly) faster
+* Fixed structure persistance issue
+
+7/17/2021: 
+* Fixed the "undefined leaderboard" glitch
+* You no longer gain points for kills made while you're dead
+* Respawning no longer provides you with an extra crafter
+
+Entry 9.5 (patch): Improved box texture (now you can see what's in a box after it's placed)
+
+Entry 9.5: 
+* Retextured structures
+* Hit animations now look prettier
+* Various optimizations
+* Fixed a few box exploits (e.g. "get boost wrench, box your boost pads and give to a trap player for infinite traps")
+* Added new structure: Lapis spikes, which deals damage when you hit them. 
+    Only available through crafting
+
+Entry 9:
+* Fixed lag caused by bots (obviously, doesn't apply to bot-free version)
+* Made shadows look better (shadows are now on the top layer)
+* Fixed bug where inventory doesn't display after respawn
+
+Entry 8.5:
+* Modified position backtracking
+    * Improves trap mechanics a bit
+* Extended position backtracking to all objects, so collisions are more accurate
+haha low physics tickrate go brr
+* You can now craft a new crafting table
+
+Entry 8:
+* Crafting added
+    * Place items onto the crafting bench, then hit once with any weapon to craft
+    * Craft items will get added to EITHER inventory or actionbar, so make sure to check both after crafting
+    * Check the crafting page (link can be found on bottom right of game screen) for recipies and more info
+    * Crafting right now is limited in the items that can be made, but it will be greatly expanded in the future
+* Build placements when moving at high speed (i.e. boosting) are now more accurate
+
+Entry 7.5: respawn inventory bug fixed
+
+Entry 7 (7/11/2021):
+* UI overhaul - text is FAR more readable, and all the menus are more obvious
+* Inventory system is added! Click "inventory" to open the menu, and drag to 
+    re-order inventory items
+Crafting update will come soon
+
+Entry 6:
+* Trench is no longer a secondary - Estick is the new one, granting access to Trench
+    * This is done in preparation for crafting update
+* Hammer is now a secondary, with the same damage stats as wrench (but same speed as stick)
+    * More moomoo-like feel
+
+Entry 5 (7/8/2021):
+* Tweaked trap mechanics, now the capture is more "smooth" (no speed increase)
+    * Unfortunately, this adds a "rubber-banding" like effect, which isn't present
+        in moomoo, but the goal here is to eliminate the "stuck in center" 
+        case
+            * Moomoo benefits from a higher physics tick rate, due to better
+                servers, so this is unavoidable for a repl-hosted game. Time
+                rewinding helps this a bit, however
+* Game will rewind time for trap collisions to get more accurate measurements
+    * Only will make a difference for high speed (e.g. wrench w/ max speed, or boost pad)
+    * Physics are now consistent for all movement speeds
+
+Entry 4 (7/7/2021):
+* Added a bot-free server, available at nobot.mooink.repl.co
+    * bot-free server might be a little behind on updates
+
+Entry 3:
+* Fixed weapons swing hit detection bug
+    * Fixes shield bug as well, as both are the same code
+* Greatly reduced nuro's weapon damage - the quadding is OP enough,
+  unless you're snoosh
+* Bots now spawn randomly throughout the caves
+* UI has been overhauled because people don't read the info pages... they've been moved to a more front-and-center location
+
+Entry 2:
+* Fixed areas blocked flashing issue
+* Trees now block view again
+
+Entry 1:
+* Fixed weapons swing animations issue
+* Added visualization for areas blocked by an object
+* Trees no longer block view (might be rolled back?)55555

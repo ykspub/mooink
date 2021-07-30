@@ -1,0 +1,202 @@
+#HUDData {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 22px;
+    z-index: 999;
+    display: none;
+    border-radius: 7px;
+    padding: 6px;
+	margin: 5px;
+}
+
+#chatDisplay {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 75px;
+    width: 30%;
+    height: 10vw;
+    z-index: 999;
+    overscroll-behavior: none;
+    background-color: rgba(102, 186, 125, 0.3);
+    resize: horizontal;
+    overflow-y: scroll;
+}
+
+.chatEntryDiv {
+    user-select: none;
+    font-family: Arial;
+    font-size: 18px;
+    word-wrap: break-word;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.gameTextColor, .gameMenuPane {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-family: Arial;
+}
+
+.gameMenuPane {
+    background-color: rgba(176, 176, 176, 0.7);
+}
+
+#craftingHolder {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+#chatBox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: 35%;
+    right: 35%;
+    width: 30%;
+    top: 10%;
+    z-index: 999;
+}
+
+#selectBar {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.selectBarItem {
+    border-radius: 10px;
+    margin: 4px;
+}
+
+#actionFloat {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 999;
+    display: none;
+}
+
+.actionFloatChild {
+    float: right;
+    text-align: left;
+    font-size: 20px;
+    padding: 6px;
+    margin: 5px;
+    border-radius: 7px;
+}
+
+#teamList {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#storageManagementHolder {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 5px;
+    display: none;
+    overflow-y: scroll;
+    max-height: 80vh;
+}
+
+#storageManagement {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#recipeList {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	z-index: 999;
+	display: none;
+}
+#recipeList > iframe {
+	background-color: white;
+	width: 50vw;
+	height: 50vh;
+}
+
+.teamEntry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.teamLabel {
+    float: left;
+    font-size: 18;
+    margin: 5px;
+}
+
+.actionBarLabel, .inventoryLabel, .specialLabel, .infoLabel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18;
+    margin: 5px;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.actionBarLabel {
+    background-color: rgba(173, 148, 102, 0.7);
+}
+.inventoryLabel {
+    background-color: rgba(102, 131, 173, 0.7);
+}
+.specialLabel {
+    background-color: rgba(159, 102, 173, 0.7);
+}
+.infoLabel {
+    background-color: rgba(102, 131, 173, 0.7);
+}
+
+.actionBarHelper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.actionBarInlineLabel {
+    margin: 5px;
+}
+
+.clanTextBox {
+    float: left;
+    font-family: Arial;
+    font-size: 18;
+    margin: 5px;
+}
+
+.preventSelect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>SkyMoo</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="/Landmine.png">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="gameMenus.css">
+    <script src="msgpack.js"></script>
+    <script src="config.js"></script>
+    <script src="inventoryManager.js"></script>
+	<script src="inputManager.js"></script>
+    <script src="joinInfo.js"></script>
+    <script src="mapData.js"></script>
+    <script src="utilCalc.js"></script>
+    <script src="serverHandler.js"></script>
+    <script src="bundle.js"></script>
+</head>
+<body>
+    <div id="HUDData" class="gameMenuPane preventSelect"></div>
+    <div id="chatDisplay" style="display: none" class="preventSelect"></div>
+    <input type="text" id="chatBox" style="display: none">
+    <div id="menuHolder">
+        <div id="joinDiv">
+            <div id="gameName">Skymoo (no bots)</div>
+            <div id="versionInfo">v1.9</div>
+            <div id="infoEntryHolder">
+                <a href="info.html" class="infoEntry">Info</a>
+                <a href="items.html" class="infoEntry">Items</a>
+                <a href="points.html" class="infoEntry">Stat points</a>
+            </div>
+            <div id="tipHolder"></div>
+            <input type="text" id="pName" placeholder="Name">
+            <div id="primary">
+            </div>
+            <div id="secondary">
+            </div>
+            
+            <label id="lowrescontainer"><input type="checkbox" id="lowres">
+            Low resolution</label>
+            <button type="button" id="joinGame">Join</button>
+            <a href="https://mooink.repl.co" id="botfree">Back to normal version</a>
+        </div>
+        <div id="statPoints">
+            <div id="totalPoints"></div>
+            <div id="statBody"></div>
+            <div id="colorSelectorHolder"></div>
+        </div>
+    </div>
+	<div id="actionFloat">
+		<div id="leaderboard" class="gameMenuPane preventSelect actionFloatChild">
+			Leaderboard:
+		</div>
+		<div id="teamMenuButton" class="gameMenuPane preventSelect actionFloatChild">
+			Teams
+		</div>
+		<div id="craftingHolder">
+			<div id="inventoryButton" class="gameMenuPane preventSelect actionFloatChild">
+				Inventory
+			</div>
+			<div id="recipeButton" class="gameMenuPane preventSelect actionFloatChild">
+				Recipes
+			</div>
+		</div>
+	</div>
+    <div id="selectBar" style="display: none"></div>
+    <canvas id="GameCanvas"></canvas>
+    <div id="lowerBanner">
+        <a href="info.html">Info</a>
+        <a href="credits.txt">Credits</a>
+        <a href="privacy.txt">Privacy</a>
+        <a href="changelog.txt">Changelog</a>
+    </div>
+    <div id="teamList" class="gameMenuPane preventSelect">
+        <div id="teamEntry"></div>
+    </div>
+    <div id="storageManagementHolder" class="gameMenuPane preventSelect">
+        <div class="infoLabel">Drag and drop slots to move items between them</div>
+        <div class="infoLabel">On mobile, tap one slot, then click another slot, instead of dragging</div>
+        <div id="storageManagement" class="gameMenuPane preventSelect"></div>
+    </div>
+	<div id="recipeList" class="gameMenuPane preventSelect">
+        <iframe src="/crafting.html"></iframe>
+    </div>
+    <canvas id="minimap"></canvas>
+    <div id="disconnected" class="preventSelect">
+        Disconnected
+    </div>
+    <!--<img id="background" src="/screenie.png"></img>-->
+</body>
+</html>
